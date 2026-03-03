@@ -20,4 +20,14 @@ COMMENT ON TABLE raw_weather_forecast IS 'Tabela RAW para dados da API OpenWeath
 /* 
 I used Ames, Iowa as the city for the data because it's the world capital of agronomy, 
 and from what I could research, it has excellent data in APIs.
+
+
+
+later i also ran this sql script to fix a error that ocurred while running the python ingestion script:
+
+DROP INDEX IF EXISTS uniq_forecast_time;
+
+ALTER TABLE raw_weather_forecast 
+ADD CONSTRAINT uq_raw_weather_location_time 
+UNIQUE (location_name, forecast_timestamp);
 */
