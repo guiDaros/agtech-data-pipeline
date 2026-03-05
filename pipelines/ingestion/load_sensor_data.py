@@ -60,5 +60,5 @@ def generate_sensor_data(days=7, field_id="FIELD_001"):
 
 if __name__ == "__main__":
     df = generate_sensor_data(days=3)
-    df.to_csv("data/raw_sensors_preview.csv", index=False)
-    print(f"✅ Simulação concluída: {len(df)} linhas geradas em 'data/raw_sensors_preview.csv'")
+    # df.to_csv("data/raw_sensors_preview.csv", index=False)
+    # print(f"✅ Simulação concluída: {len(df)} linhas geradas em 'data/raw_sensors_preview.csv'")
